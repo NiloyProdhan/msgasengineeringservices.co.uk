@@ -1,0 +1,148 @@
+.rkit-tab-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.rkit-tab-container {
+  display: flex;
+}
+
+.rkit-tab-container.horizontal {
+  flex-direction: column;
+}
+
+.rkit-tab-container.vertical {
+  flex-direction: row;
+}
+
+.rkit-tab-nav {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.rkit-tab-nav.bordered {
+  border-bottom: 1px solid #929292;
+}
+
+.rkit-tab-nav.bordered .rkit-tab-btn-item{
+  margin-bottom: -1px;
+  background-color: transparent;
+}
+
+.rkit-tab-nav.bordered .rkit-tab-btn-item.active {
+  background-color: #fff;
+  color: inherit;
+  border: 1px solid #929292;
+  border-bottom: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.rkit-tab-container.vertical .rkit-tab-nav.bordered {
+  border-bottom: 0;
+}
+
+.rkit-tab-container.vertical .rkit-tab-nav.bordered .rkit-tab-btn-item.active {
+  border-bottom: 1px solid #929292;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.rkit-tab-nav.bordered .rkit-tab-btn-item.active .tab-title-icon {
+  color: inherit;
+  fill: inherit;
+}
+
+.rkit-tab-container.horizontal .rkit-tab-nav {
+  flex-direction: row;
+}
+
+.rkit-tab-container.vertical .rkit-tab-nav {
+  flex-direction: column;
+}
+
+.rkit-tab-btn-item {
+  width: auto;
+  background-color: gray;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.rkit-tab-btn-item.shrink {
+  flex: 0 0 auto;
+}
+
+.rkit-tab-btn-item.active {
+  background-color: rgb(32, 32, 32);
+  color: white;
+}
+
+.rkit-tab-btn-item.active .tab-title-icon {
+  color: white;
+  fill: white;
+}
+
+.tab-title-icon {
+  font-size: 18px;
+  width: 18px;
+  display: flex;
+}
+
+.rkit-tab-container.vertical .rkit-tab-content-wrapper {
+  flex: 1;
+  width: 0;
+}
+
+.rkit-tab-container.horizontal .rkit-tab-content-wrapper {
+  width: 100%;
+}
+
+.rkit-tab-content {
+  display: none;
+  /* margin: 20px 0px 0px 0px; */
+  /* padding: 20px; */
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.rkit-tab-content.active {
+  display: block;
+  opacity: 1;
+  animation: fade 0.5s ease-in-out;
+}
+
+.rkit-tab-content-container {
+  flex: 1;
+  padding: 20px;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .rkit-tab-container.vertical {
+        flex-direction: column;
+      }
+  .rkit-tab-btn-item,
+  .rkit-tab-btn-item.shrink {
+    flex: 1 1 auto !important;
+  }
+
+  .rkit-tab-container.vertical .rkit-tab-content-wrapper {
+    width: 100%;
+  }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

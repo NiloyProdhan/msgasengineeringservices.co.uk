@@ -1,0 +1,295 @@
+
+.client-grid-container{
+  display: block;
+  max-height: max-content;
+  height: 100%;
+  width: 100%;
+}
+.client-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-direction: row;
+  gap: 5px;
+  background-color: transparent;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .rkit-card-client {
+   height : 200px;
+ }
+ }
+
+/* css image */
+
+
+/* Image container (ensure the image is contained properly) */
+.image-container-cg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  max-height: max-content;
+}
+
+.image-container-cg img {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.5s;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.clientslogo-image {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  overflow: hidden;
+
+
+}
+
+.clientslogo-image-full-cg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  overflow: hidden;
+
+}
+
+.clientslogo-image-full-cg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+/* image hover */
+.image-hover-cg {
+  opacity: 0;
+  display: relative;
+  align-items: center;
+  justify-content: center;
+  /* color: #000000; */
+}
+
+
+.fade_in .image-hover-cg {
+  transform: scale(1);
+}
+
+.fade_in:hover .image-hover-cg {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+
+.fade_in:hover .image-default {
+  opacity: 0;
+}
+
+
+
+.horizontal .image-hover-cg {
+  transform: translateX(100%);
+}
+
+.horizontal:hover .image-hover-cg {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.horizontal:hover .image-default {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.vertical .image-hover-cg {
+  transform: translateY(100%);
+}
+
+.vertical:hover .image-hover-cg {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vertical:hover .image-default {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+
+
+
+/*  text hover */
+.hover-content-cg {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-self: flex-start;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  background: #33e4c0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  background-clip: content-box;
+}
+
+
+.fade_in .hover-conten {
+  transform: none;
+}
+
+.fade_in:hover .hover-conten {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  transform: translateX(0);
+}
+
+
+.horizontal .hover-conten {
+  transform: translateX(100%);
+}
+
+.horizontal:hover .hover-conten {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.vertical .hover-conten {
+  transform: translateY(100%);
+}
+
+.vertical:hover .hover-conten {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.hover-title-cg {
+  padding: 0px;
+  margin: 0px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.hover-description-cg {
+  padding: 0px;
+  margin: 0px;
+  margin: 0px;
+  color: #ddd;
+  transition: color 0.3s ease-in-out;
+}
+
+/* end css image and hover */
+
+/* navigation css */
+
+
+.card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.card-body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.card-title {
+  margin: 0;
+
+}
+
+.card-title a {
+  text-decoration: none;
+  color: #161616;
+}
+
+.card-heading {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.rkit-clientslogo .card-button a {
+  background-color: #33e4c0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  color: white;
+  transition: all 0.5s;
+  border-radius: 0px;
+}
+
+.rkit-clientslogo .card-button {
+  display: flex;
+  justify-content: start;
+}
+
+.rkit-clientslogo .card-button a .button-icon {
+  transition: color 0.5s;
+}
+
+.rkit-clientslogo.overlay {
+  position: relative;
+}
+
+.rkit-clientslogo.overlay .card-body {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.rkit-clientslogo.overlay .card-button {
+  justify-content: center;
+}
+
+.rkit-clientslogo.overlay:hover .card-body {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.rkit-clientslogo-slider .swiper-slide {
+  overflow: unset;
+}
+
+.card-button.fullwidth a {
+  width: 100%;
+}

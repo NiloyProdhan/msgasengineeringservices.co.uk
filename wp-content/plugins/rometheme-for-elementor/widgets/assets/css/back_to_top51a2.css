@@ -1,0 +1,43 @@
+.rkit-back-to-top-container {
+  display: flex;
+}
+
+.rkit-back-to-top-button {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.rkit-back-to-top-progress .rkit-back-to-top-button {
+  border-radius: 50%;
+}
+
+.scroll-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rkit-back-to-top-button.hide-button-on-scroll {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5rem);
+}
+
+.rkit-back-to-top-button.hide-button-on-scroll.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0rem);
+}
+
+.back-to-top-text {
+  line-height: 0;
+}

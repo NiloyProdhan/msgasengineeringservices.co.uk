@@ -1,0 +1,45 @@
+
+/* Basic tooltip style */
+.rtm-tooltip {
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  /* Tampil tooltip di editor juga */
+  .elementor-editor-active .rtm-tooltip::after {
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 99999 !important;
+    pointer-events: auto;
+  }
+  
+  
+  .rtm-tooltip-enabled::after {
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translate(var(--x, 0), var(--y, 0));
+    background-color: #fd0101;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .rtm-tooltip-enabled:hover::after {
+    opacity: 1;
+  }
+  .elementor-editor-active .rtm-tooltip-enabled:hover::after {
+    opacity: 1 !important;
+  }
+  
+  .elementor-editor-active .elementor-section-wrap {
+    overflow: visible !important;
+  }
+  

@@ -1,0 +1,129 @@
+.rkit-countdown-widget {
+    background-color: var(--section-background, transparent);
+    color: var(--text-color, #000);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Digital-7', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  */
+ 
+#countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* kasih jarak antar elemen */
+}
+
+.countdown-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-top-row {
+  /* font-size: 32px; */
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-label {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.countdown-separator {
+  font-size: 32px;
+  font-weight: bold;
+  align-self: center;
+  line-height: 1;
+  margin: 0 5px;
+}
+
+/*  */
+.countdown-title-wrapper{
+    margin-bottom : -20px;
+}
+
+.rkit-countdown-widget .countdown-title {
+    color: var(--title-color, #000);
+    /* font-size: 2em;m */
+}
+ 
+
+.countdown_contain {
+    display: flex;    
+    flex-wrap: wrap;
+    gap : 20px;
+}
+
+
+.rkit-countdown-widget .countdown-section {
+    background-color: var(--section-background, transparent);
+    padding: 20px 10px;
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;  
+}
+
+.rkit-countdown-widget  .countdown-section-row {
+    background-color: var(--section-background, transparent);
+    padding: 20px 10px;
+    border-radius: 5px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;  
+    gap: 2.5px; 
+}
+
+.rkit-countdown-widget .countdown-label {
+    font-size: 1em;
+    color: #00CEA6;  
+    height: 100%; 
+    display: flex; 
+    align-self: center !important;
+    align-items: center;
+}
+.time_sett{
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 90px;
+}
+
+.hidden {
+    display: none;
+}
+
+.countdown-section-container {
+    display: flex;
+}
+
+.rkit-countdown-separator .countdown_contain .countdown-section-container:not(:first-child)::before {
+    content: ":";
+    font-size: 90px;
+    display: inline-flex;
+    line-height: 1;
+    align-items: center;
+    margin: -40px 0px 0px 0px;
+}
+
+@media (max-width: 600px) {
+    #countdown {
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+}
+
